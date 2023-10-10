@@ -6,18 +6,18 @@ import java.util.List;
 
 public class OrdenacaoPessoas {
     //atributo
-    private List<Pessoa> pessoaList;
+    private List<Pessoas> pessoaList;
 
     public OrdenacaoPessoas() {
         this.pessoaList = new ArrayList<>();
     }
 
     public void adicionarPessoa(String nome, int idade, double altura) {
-        pessoaList.add(new Pessoa(nome, idade, altura));
+        pessoaList.add(new Pessoas(nome, idade, altura));
     }
 
-    public List<Pessoa> ordenarPorIdade() {
-        List<Pessoa> pessoasPorIdade = new ArrayList<>(pessoaList);
+    public List<Pessoas> ordenarPorIdade() {
+        List<Pessoas> pessoasPorIdade = new ArrayList<>(pessoaList);
         if (!pessoaList.isEmpty()) {
             Collections.sort(pessoasPorIdade);
             return pessoasPorIdade;
@@ -26,8 +26,8 @@ public class OrdenacaoPessoas {
         }
     }
 
-    public List<Pessoa> ordenarPorAltura() {
-        List<Pessoa> pessoasPorAltura = new ArrayList<>(pessoaList);
+    public List<Pessoas> ordenarPorAltura() {
+        List<Pessoas> pessoasPorAltura = new ArrayList<>(pessoaList);
         if (!pessoaList.isEmpty()) {
             Collections.sort(pessoasPorAltura, new ComparatorPorAltura());
             return pessoasPorAltura;
